@@ -1,0 +1,26 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $clr-background;
+  color: $clr-text-dark;
+  font-family: $ff-primary;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+body {
+  cursor: url(../images/cursors/ice-cream-arrow.png), auto;
+}
+
+a,
+button,
+.swiper-pagination-clickable .swiper-pagination-bullet,
+.modal-buy-now__radio-button-chekbox {
+  cursor: url(../images/cursors/ice-cream-pointer.png), auto;
+}

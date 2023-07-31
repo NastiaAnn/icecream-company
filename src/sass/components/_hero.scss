@@ -1,0 +1,268 @@
+.hero {
+  padding-top: 50px;
+  padding-bottom: 0;
+  @include tablet {
+    padding-top: 14px;
+  }
+  @include desktop {
+    padding-top: 45px;
+  }
+}
+.hero__container {
+  position: relative;
+  height: 454px;
+  background-image: url('../images/hero-bg-mobile.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  @include pixel-ratio-x2 {
+    background-image: url('../images/hero-bg-mobile-2x.png');
+  }
+  @include tablet {
+    height: 349px;
+    background-image: url('../images/hero-bg-tablet.png');
+    @include pixel-ratio-x2 {
+      background-image: url('../images/hero-bg-tablet-2x.png');
+    }
+  }
+  @include desktop {
+    height: 591px;
+    background-image: url('../images/hero-bg-desktop.png');
+    @include pixel-ratio-x2 {
+      background-image: url('../images/hero-bg-desktop-2x.png');
+    }
+  }
+}
+
+.hero__title {
+  width: 247px;
+  margin-bottom: 32px;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: calc(33 / 26);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: left;
+  @include tablet {
+    margin-bottom: 24px;
+  }
+  @include desktop {
+    width: 367px;
+    margin-bottom: 28px;
+    font-size: 38px;
+    line-height: calc(48 / 38);
+  }
+}
+
+.hero__title-partial {
+  font-size: 34px;
+  line-height: calc(33 / 34);
+  @include desktop {
+    font-size: 38px;
+    line-height: calc(48 / 38);
+  }
+}
+
+.hero__btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 12px;
+  @include desktop {
+    gap: 34px;
+  }
+}
+
+.hero__prod-btn {
+  display: inline-block;
+  padding: 9px 24px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(15 / 12);
+  color: inherit;
+  @include desktop {
+    padding: 10px 32px;
+    font-size: 14px;
+    line-height: calc(18 / 14);
+  }
+}
+
+.hero__him-btn {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(15 / 12);
+  text-decoration-line: underline;
+  @include tablet {
+  }
+  @include desktop {
+    font-size: 14px;
+    line-height: calc(17 / 14);
+  }
+}
+
+.hero__main-img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-43%);
+  width: 177px;
+  height: 217px;
+  @include tablet {
+    left: 408px;
+    width: 268px;
+    height: 329px;
+    transform: translateX(0);
+  }
+  @include desktop {
+    width: 456px;
+    height: 560px;
+    left: 652px;
+  }
+}
+
+.hero__sub-info-wrapper {
+  display: none;
+  @include tablet {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    position: absolute;
+    bottom: 12px;
+    left: 32px;
+  }
+  @include desktop {
+    gap: 16px;
+    bottom: 65px;
+    left: 16px;
+  }
+}
+
+.hero__sub-img {
+  width: 152px;
+  height: 152px;
+  border-radius: 50%;
+  @include desktop {
+    width: 225px;
+    height: 225px;
+  }
+}
+
+.hero__sub-btn {
+  display: block;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.hero__sub-btn-icon {
+  fill: $clr-text-light;
+  transition: fill 150ms cubic-bezier(1, -0.14, 1, 1.29);
+
+  .hero__sub-btn:active & {
+    fill: $clr-button-hover;
+  }
+  @include desktop {
+    .hero__sub-btn:hover &,
+    .hero__sub-btn:focus & {
+      fill: $clr-button-hover;
+    }
+  }
+}
+
+.hero__sub-text-wrapper {
+  @include desktop {
+    position: absolute;
+    top: 67px;
+    left: 241px;
+  }
+}
+
+.hero__text {
+  margin-bottom: 12px;
+  width: 139px;
+  font-size: 12px;
+  line-height: calc(17 / 12);
+  color: $clr-text-light;
+  @include desktop {
+    margin-bottom: 24px;
+    width: 200px;
+    font-size: 14px;
+    line-height: calc(20 / 14);
+  }
+}
+
+.stat__list {
+  display: none;
+  @include tablet {
+    position: absolute;
+    right: 32px;
+    bottom: 205px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+  @include desktop {
+    right: 16px;
+    bottom: 370px;
+    gap: 16px;
+  }
+}
+
+.stat__item {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  flex-direction: column;
+}
+
+.stat__value {
+  font-weight: 900;
+  font-size: 28px;
+  line-height: calc(34 / 28);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $clr-text-dark;
+  @include desktop {
+    font-size: 46px;
+    line-height: calc(56 / 46);
+  }
+}
+
+.stat {
+  font-size: 8px;
+  line-height: calc(10 / 8);
+  color: $clr-text-light;
+  @include desktop {
+    font-size: 14px;
+    line-height: calc(17 / 14);
+  }
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  width: 64px;
+  height: 64px;
+  z-index: 9;
+  background-image: url(../images/to-top/to-top-idle.png);
+  &:active {
+    background-image: url(../images/to-top/to-top-active.png);
+  }
+  @include desktop {
+    &:hover {
+      background-image: url(../images/to-top/to-top-active.png);
+    }
+  }
+}
+
+.to-top {
+  position: absolute;
+  top: 5px;
+  left: 19px;
+  font-weight: 800;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $clr-text-dark;
+}
